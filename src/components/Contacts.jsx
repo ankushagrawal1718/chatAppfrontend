@@ -66,7 +66,7 @@ export default function Contacts({contacts,currentUser,changeChat}) {
 
 const Container = styled.div`
 display: grid;
-grid-template-rows: 10% 75% 15%;
+grid-template-rows: 10% 78% 12%;
 overflow: hidden;
 background-color: #080420;
 .brand {
@@ -88,6 +88,7 @@ background-color: #080420;
   align-items: center;
   overflow: auto;
   gap: 0.8rem;
+  
   &::-webkit-scrollbar {
     width: 0.2rem;
     &-thumb {
@@ -101,7 +102,7 @@ background-color: #080420;
     min-height: 5rem;
     cursor: pointer;
     width: 90%;
-    border-radius: 0.2rem;
+    border-radius: 0.8rem;
     padding: 0.4rem;
     display: flex;
     gap: 1rem;
@@ -117,6 +118,7 @@ background-color: #080420;
         color: white;
       }
     }
+    
   }
   .selected {
     background-color: #9a86f3;

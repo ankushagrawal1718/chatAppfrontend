@@ -6,6 +6,7 @@ import { BsEmojiSmileFill } from "react-icons/bs";
 
 
 export default function ChatInput({handleSendMsg}) {
+  // console.log(Picker);
   const [showEmojiPicker, setShowEmojiPicker] = useState(false);
   const [msg, setMsg] = useState("");
 
@@ -22,9 +23,11 @@ export default function ChatInput({handleSendMsg}) {
 
   }
   const handleEmojiClick = (event, emojiObject) => {
-    console.log(emojiObject);
+    // console.log(Picker);
+    // console.log("Event:", event);
+    // console.log(emojiObject);
     let message = msg;
-    message += emojiObject.emoji;
+    message += event.emoji;
     setMsg(message);
   };
   return (
@@ -52,8 +55,8 @@ export default function ChatInput({handleSendMsg}) {
 
 const Container = styled.div`
   display: grid;
-  align-items: center;
   grid-template-columns: 5% 95%;
+  align-items: center;
   background-color: #080420;
   padding: 0 2rem;
   padding-bottom: 0.3rem;
@@ -69,10 +72,33 @@ const Container = styled.div`
         color: #ffff00c8;
         cursor: pointer;
       }
-      .emoji-picker-react {
+      .EmojiPickerReact{
         position: absolute;
-        top: -350px;
+        top: -30rem;
         background-color: #080420;
+        box-shadow: 0 5px 10px #9a86f3;
+        border-color: #9a86f3;
+        
+        .epr-body-scroll-wrapper::-webkit-scrollbar {
+          background-color: #080420;
+          width: 5px;
+          &-thumb {
+            background-color: #9a86f3;
+          }
+        }
+        .emoji-categories {
+          button {
+            filter: contrast(0);
+          }
+        }
+        li.epr-emoji-category>.epr-emoji-category-label{
+          background-color:  #080420;
+          border-color: #9a86f3;
+          color:white;
+        }
+        .emoji-group:before{
+          background-color: #080420;
+        }
       }
     }
   }
@@ -80,6 +106,7 @@ const Container = styled.div`
     width: 100%;
     border-radius: 2rem;
     display: flex;
+    margin-left:10px;
     align-content: center;
     gap: 2rem;
     background-color: #ffffff34;

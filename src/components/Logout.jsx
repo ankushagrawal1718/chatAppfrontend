@@ -1,6 +1,5 @@
 import React from 'react';
-import axios from 'axios';
-import { Navigate, useNavigate } from 'react-router-dom';
+import {  useNavigate } from 'react-router-dom';
 import { styled } from 'styled-components';
 import {BiPowerOff} from "react-icons/bi"
 
