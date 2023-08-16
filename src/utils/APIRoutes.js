@@ -1,5 +1,5 @@
 // export const host = "http://localhost:5500"
-export const host = "https://chatappbackend-xx42.onrender.com/"
+export const host = "https://chatappbackend-xx42.onrender.com"
 
 export const registerRoute = `${host}/api/auth/register`;
 export const loginRoute = `${host}/api/auth/login`;
