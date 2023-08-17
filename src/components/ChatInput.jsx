@@ -32,12 +32,12 @@ export default function ChatInput({handleSendMsg}) {
   };
   return (
     <Container>
-    <div className="button-container">
-      <div className="emoji">
-        <BsEmojiSmileFill onClick={handleEmojiPickerHideShow} />
-        {showEmojiPicker && <Picker onEmojiClick={handleEmojiClick} />}
+      <div className="button-container">
+        <div className="emoji">
+          <BsEmojiSmileFill onClick={handleEmojiPickerHideShow} />
+          {showEmojiPicker && <Picker onEmojiClick={handleEmojiClick} />}
+        </div>
       </div>
-    </div>
       <form className="input-container" onSubmit={(e)=>sendChat(e)}>
         <input
           type="text"
@@ -60,6 +60,7 @@ const Container = styled.div`
   background-color: #080420;
   padding: 0 2rem;
   padding-bottom: 0.3rem;
+  margin: 5px 0;
   .button-container {
     display: flex;
     align-items: center;

@@ -103,8 +103,8 @@ const Container = styled.div`
   align-items: center;
   background-color: #131324;
   .container {
-    height: 95vh;
-    width: 95vw;
+    height: 98vh;
+    width: 98vw;
     background-color: #00000076;
     display: grid;
     grid-template-columns: 25% 75%;
@@ -112,7 +112,7 @@ const Container = styled.div`
       grid-template-columns: 35% 65%;
     }
     @media screen and (min-width: 200px) and (max-width: 767px){
-      grid-template-columns: 95% ;
+      grid-template-columns: 100% ;
     }
   }
 `;
