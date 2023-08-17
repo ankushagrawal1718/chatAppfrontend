@@ -14,7 +14,16 @@ function Chat() {
   const [contacts,setContacts] = useState([]);
   const [currentUser,setCurrentUser] = useState(undefined)
   const [currentChat,setCurrentChat] = useState(undefined)
-  const [isLoaded,setIsLoaded] = useState(false)
+  const [isLoaded,setIsLoaded] = useState(false);
+  const [windowWidth, setWindowWidth] = useState(window.innerWidth);
+
+  useEffect(() => {
+    // Update window width on resize
+    const handleResize = () => setWindowWidth(window.innerWidth);
+    window.addEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
+
 
 
   useEffect(()=>{
@@ -57,17 +66,30 @@ function Chat() {
 
   return (
     
-    <Container>
-      <div className='container'>
-       <Contacts contacts={contacts} currentUser = {currentUser} changeChat ={handleChatChange  }/>
-       {isLoaded && currentChat === undefined?(
-           <Welcome currentUser = {currentUser}/>
-       ):(
-           <ChatContainer currentChat = {currentChat} currentUser = {currentUser} socket = {socket} />
-       )
-       }  
-      </div>
-    </Container>
+    // <Container>
+    //   <div className='container'>
+    //     <Contacts contacts={contacts} currentUser = {currentUser} changeChat ={handleChatChange  }/>
+    //     {isLoaded && currentChat === undefined?(
+    //         <Welcome currentUser = {currentUser}/>
+    //     ):(
+    //         <ChatContainer currentChat = {currentChat} currentUser = {currentUser} socket = {socket} />
+    //     )
+    //     }  
+    //   </div>
+    // </Container>
+
+      <Container>
+        <div className="container">
+          {windowWidth<=767 ?(currentUser?(<ChatContainer currentChat = {currentChat} currentUser = {currentUser} socket = {socket} />):(<Contacts contacts={contacts} currentUser = {currentUser} changeChat ={handleChatChange  }/>)): (<>
+            <Contacts contacts={contacts} currentUser={currentUser} changeChat={handleChatChange} />
+            {isLoaded && currentChat === undefined ? (
+              <Welcome currentUser={currentUser} />
+            ) : (
+              <ChatContainer currentChat={currentChat} currentUser={currentUser} socket={socket} />
+            )}
+          </>) }
+        </div>
+      </Container>
   )
 }
 
@@ -86,8 +108,11 @@ const Container = styled.div`
     background-color: #00000076;
     display: grid;
     grid-template-columns: 25% 75%;
-    @media screen and (min-width: 720px) and (max-width: 1080px) {
+    @media screen and (min-width: 768px) and (max-width: 1080px) {
       grid-template-columns: 35% 65%;
+    }
+    @media screen and (max-width: 767px)  {
+      grid-template-columns: 95% ;
     }
   }
 `;
