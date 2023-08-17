@@ -80,7 +80,7 @@ function Chat() {
 
       <Container>
         <div className="container">
-          {windowWidth<=767 ?(currentUser?(<ChatContainer currentChat = {currentChat} currentUser = {currentUser} socket = {socket} />):(<Contacts contacts={contacts} currentUser = {currentUser} changeChat ={handleChatChange  }/>)): (<>
+          {windowWidth<=767 ?(currentChat ?(<ChatContainer currentChat = {currentChat} currentUser = {currentUser} socket = {socket} />):(<Contacts contacts={contacts} currentUser = {currentUser} changeChat ={handleChatChange  }/>)): (<>
             <Contacts contacts={contacts} currentUser={currentUser} changeChat={handleChatChange} />
             {isLoaded && currentChat === undefined ? (
               <Welcome currentUser={currentUser} />
@@ -111,7 +111,7 @@ const Container = styled.div`
     @media screen and (min-width: 768px) and (max-width: 1080px) {
       grid-template-columns: 35% 65%;
     }
-    @media screen and (max-width: 767px)  {
+    @media screen and (min-width: 400px) and (max-width: 767px){
       grid-template-columns: 95% ;
     }
   }
