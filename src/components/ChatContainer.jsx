@@ -112,6 +112,7 @@ const Container = styled.div`
     grid-template-rows: 15% 70% 15%;
   }
   .chat-header {
+    margin-top: 10px;
     display: flex;
     position: sticky;
     justify-content: space-between;

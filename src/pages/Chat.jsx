@@ -94,7 +94,7 @@ function Chat() {
 }
 
 const Container = styled.div`
-  height: 100vh;
+  height: 95vh;
   width: 100vw;
   display: flex;
   flex-direction: column;
@@ -107,7 +107,7 @@ const Container = styled.div`
     width: 98vw;
     background-color: #00000076;
     display: grid;
-    grid-template-columns: 25% 75%;
+    grid-template-columns: 30% 70%;
     @media screen and (min-width: 768px) and (max-width: 1080px) {
       grid-template-columns: 35% 65%;
     }

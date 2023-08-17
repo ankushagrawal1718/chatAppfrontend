@@ -107,7 +107,7 @@ background-color: #080420;
     display: flex;
     gap: 1rem;
     align-items: center;
-    transition: 0.5s ease-in-out;
+    transition: 0.01s ease-in-out;
     .avatar {
       img {
         height: 3rem;
@@ -120,9 +120,15 @@ background-color: #080420;
     }
     
   }
+  
   .selected {
     background-color: #9a86f3;
   }
+}
+.contacts : hover {
+  background-color: #c4b9f9;
+  // opacity: 0.4;
+  // background:transparent;
 }
 .current-user {
   background-color: #0d0d30;
