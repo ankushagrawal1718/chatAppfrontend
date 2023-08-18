@@ -167,24 +167,27 @@
         display:flex;
         align-items:center;
         .content{
-          max-width:40%;
+          max-width:70%;
           overflow-wrap: break-word;
           padding: 1rem;
           font-size:1.1rem;
           border-radius: 1rem;
-          color:#d1d1d1;
         }
       }
       .sended{
+        color:#d1d1d1;
         justify-content: flex-end;
         .content{
           background-color: #4f04ff21;
         }
       }
       .received{
+        // color:#d1d1d1;
+        color: black;
         justify-content: flex-start;
         .content{
-          background-color: #4f04ff21;
+          // background-color: #4f04ff21;
+          background-color: #ebebebf5;
         }
       }
     }

@@ -105,11 +105,12 @@ const Container = styled.div`
   }
   .input-container {
     width: 100%;
+    height: 50px;
     border-radius: 2rem;
     display: flex;
     margin-left:10px;
     align-content: center;
-    gap: 2rem;
+    gap: 7rem;
     background-color: #ffffff34;
     input {
       width: 90%;
@@ -127,9 +128,11 @@ const Container = styled.div`
       }
     }
     button {
-      margin: 0.3rem 0.3rem;
-      padding: 0.3rem 2rem;
-      border-radius: 2rem;
+      width: 40px;
+      margin: auto -2.8rem;
+      padding: 0.4rem 0.1rem;
+      border-radius: 50%;
+      font-size: 0.8rem;
       display: flex;
       justify-content: center;
       align-items: center;
@@ -138,6 +141,7 @@ const Container = styled.div`
       border: none;
       svg {
         font-size: 1.5rem;
+        padding-left:3px;
       }
     }
   }
