@@ -80,12 +80,12 @@ function Chat() {
 
       <Container>
         <div className="container">
-          {windowWidth<=767 ?(currentChat ?(<ChatContainer currentChat = {currentChat} currentUser = {currentUser} socket = {socket} />):(<Contacts contacts={contacts} currentUser = {currentUser} changeChat ={handleChatChange  }/>)): (<>
+          {windowWidth<=767 ?(currentChat ?(<ChatContainer currentChat = {currentChat} setCurrentChat= {setCurrentChat} currentUser = {currentUser} socket = {socket} />):(<Contacts contacts={contacts} currentUser = {currentUser} changeChat ={handleChatChange  }/>)): (<>
             <Contacts contacts={contacts} currentUser={currentUser} changeChat={handleChatChange} />
             {isLoaded && currentChat === undefined ? (
               <Welcome currentUser={currentUser} />
             ) : (
-              <ChatContainer currentChat={currentChat} currentUser={currentUser} socket={socket} />
+              <ChatContainer currentChat={currentChat} setCurrentChat= {setCurrentChat} currentUser={currentUser} socket={socket} />
             )}
           </>) }
         </div>
