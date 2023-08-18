@@ -167,7 +167,7 @@
         display:flex;
         align-items:center;
         .content{
-          max-width:70%;
+          max-width:90%;
           overflow-wrap: break-word;
           padding: 1rem;
           font-size:1.1rem;

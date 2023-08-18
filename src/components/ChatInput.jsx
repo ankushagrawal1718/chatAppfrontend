@@ -128,8 +128,8 @@ const Container = styled.div`
       }
     }
     button {
-      width: 40px;
-      margin: auto -2.8rem;
+      width: 44px;
+      margin: auto 0.8rem;
       padding: 0.4rem 0.1rem;
       border-radius: 50%;
       font-size: 0.8rem;
