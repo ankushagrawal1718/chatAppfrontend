@@ -175,10 +175,11 @@
         }
       }
       .sended{
-        color:#d1d1d1;
+        color:white;
+        // color:#d1d1d1;
         justify-content: flex-end;
         .content{
-          background-color: #4f04ff21;
+          background-color: #8777cf;
         }
       }
       .received{
